@@ -7,7 +7,6 @@ class Trade extends Model {
 
   static get relationMappings() {
     const Stock = require("./stock");
-    const Company = require("./company");
 
     return {
       stock: {

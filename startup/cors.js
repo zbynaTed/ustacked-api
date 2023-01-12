@@ -6,10 +6,10 @@ module.exports = function (app) {
   app.use(
     cors({
       origin: [
-        "https://localhost:3000",
-        "https://localhost:3000/",
-        "http://localhost:3000",
-        "http://localhost:3000/",
+        "https://ustacked.herokuapp.com",
+        "https://ustacked.herokuapp.com/",
+        "http://ustacked.herokuapp.com",
+        "http://ustacked.herokuapp.com/"
       ],
       methods: ["POST", "GET", "PUT", "PATCH", "DELETE"],
     })

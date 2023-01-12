@@ -51,7 +51,7 @@ router.get("/symbols/symbol/:symbol", [auth], async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/", [auth], async (req, res) => {
   try {
     const stocks = await Stock.query()
       .select(

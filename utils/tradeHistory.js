@@ -35,13 +35,13 @@ function tradeHistory(tradesInput, corporateActionsInput) {
       if (
         previousTrade.balanceAdjusted ===
         (currentTrade.quantity * currentTrade.totalNumerator) /
-          currentTrade.totalDenominator
+        currentTrade.totalDenominator
       ) {
         return 4;
       } else if (
         previousTrade.balanceAdjusted >
         (currentTrade.quantity * currentTrade.totalNumerator) /
-          currentTrade.totalDenominator
+        currentTrade.totalDenominator
       ) {
         return 3;
       }
@@ -103,13 +103,13 @@ function tradeHistory(tradesInput, corporateActionsInput) {
         return (
           previousTrade.realizedGain +
           (currentTrade.priceAdjusted - currentTrade.averageBuy) *
-            currentTrade.quantityAdjusted
+          currentTrade.quantityAdjusted
         );
       } else {
         return (
           previousTrade.realizedGain +
           (currentTrade.priceAdjusted - currentTrade.averageSell) *
-            currentTrade.quantityAdjusted
+          currentTrade.quantityAdjusted
         );
       }
     }
@@ -128,17 +128,17 @@ function tradeHistory(tradesInput, corporateActionsInput) {
     if (!previousTrade)
       return currentTrade.buy
         ? (currentTrade.quantity * currentTrade.totalNumerator) /
-            currentTrade.totalDenominator
+        currentTrade.totalDenominator
         : -(currentTrade.quantity * currentTrade.totalNumerator) /
-            currentTrade.totalDenominator;
+        currentTrade.totalDenominator;
     if (currentTrade.positionStatus === 4) return 0;
     return currentTrade.buy
       ? previousTrade.balanceAdjusted +
-          (currentTrade.quantity * currentTrade.totalNumerator) /
-            currentTrade.totalDenominator
+      (currentTrade.quantity * currentTrade.totalNumerator) /
+      currentTrade.totalDenominator
       : previousTrade.balanceAdjusted -
-          (currentTrade.quantity * currentTrade.totalNumerator) /
-            currentTrade.totalDenominator;
+      (currentTrade.quantity * currentTrade.totalNumerator) /
+      currentTrade.totalDenominator;
   }
 
   function calculateDividends(previousTrade, currentTrade) {
@@ -211,7 +211,7 @@ function tradeHistory(tradesInput, corporateActionsInput) {
 
         trade.dividendTotal = ca.amount
           ? trade.dividendTotal +
-            (parseFloat(ca.amount) * tempNumerator) / tempDenominator
+          (parseFloat(ca.amount) * tempNumerator) / tempDenominator
           : trade.dividendTotal;
 
         trade.quantityAdjusted =

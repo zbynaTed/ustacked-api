@@ -1,0 +1,4 @@
+{
+  "jwtPrivateKey": "stacked_jwtPrivateKey",
+  "postgresPassword": "stacked_postgresPassword"
+}

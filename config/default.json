@@ -1,0 +1,6 @@
+{
+  "port": 5500,
+  "jwtPrivateKey": "",
+  "postgresPassword": "",
+  "requiresAuth": true
+}

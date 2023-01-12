@@ -1,0 +1,35 @@
+{
+  "name": "stacked-api",
+  "version": "1.0.0",
+  "description": "stock portfolio manager api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "migrate": "npx knex migrate:latest --knexfile ./database/knexfile.js",
+    "seed": "npx knex seed:run --knexfile ./database/knexfile.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbynaTed/stacked-api.git"
+  },
+  "author": "ted",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zbynaTed/stacked-api/issues"
+  },
+  "homepage": "https://github.com/zbynaTed/stacked-api#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.2.0",
+    "lodash": "^4.17.21",
+    "objection": "^3.0.1",
+    "pg": "^8.7.3",
+    "winston": "^3.8.1"
+  }
+}
